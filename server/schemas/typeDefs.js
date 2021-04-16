@@ -9,4 +9,13 @@ const typeDefs = gql`
     password: String
     books: [Book]
   }
+
+  type Book {
+    authors: [String]
+    description: String
+    bookId: ID
+    image: String
+    link: String
+    title: String
+  }
 `;
