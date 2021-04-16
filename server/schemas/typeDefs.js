@@ -7,7 +7,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    savedB ooks: [Book]
+    savedBooks: [Book]
   }
 
   type Book {
@@ -17,6 +17,20 @@ const typeDefs = gql`
     image: String
     link: String
     title: String
+  }
+
+  input bookInput {
+    authors: [String]
+    description: String
+    bookId: ID
+    image: String
+    link: String
+    title: String
+  }
+
+  type Auth {
+    token: ID!
+    user: User
   }
 
   type Query {
